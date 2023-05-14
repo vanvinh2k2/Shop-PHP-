@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.ChiTietActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#64DD17"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="Chi tiết sản phẩm"
+        tools:ignore="MissingConstraints" >
+        <FrameLayout
+            android:layout_width="@dimen/_40ssp"
+            android:layout_gravity="right"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:layout_height="wrap_content">
+            <com.nex3z.notificationbadge.NotificationBadge
+                android:id="@+id/soluong"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_gravity="top|right"
+                android:layout_height="@dimen/_20sdp"/>
+            <ImageView
+                android:id="@+id/cart"
+                android:tint="@color/black"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:src="@drawable/ic_cart"
+                tools:layout_editor_absoluteX="362dp"
+                tools:layout_editor_absoluteY="11dp"
+                tools:ignore="UseAppTint" />
+        </FrameLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/hang"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        tools:ignore="MissingConstraints">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/sanpham"
+            app:riv_corner_radius="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_width="@dimen/_120sdp"
+            android:scaleType="centerCrop"
+            android:layout_height="@dimen/_140sdp"
+            android:src="@color/black" />
+
+        <LinearLayout
+            android:layout_marginRight="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/name"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ten san pham"
+                android:textStyle="bold"
+                android:textSize="@dimen/_18ssp" />
+
+            <TextView
+                android:id="@+id/gia"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Gia: 20000000D"
+                android:textColor="#DD2C00"
+                android:textSize="@dimen/_15ssp" />
+
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_30sdp"
+                android:background="@drawable/background_spinner"
+                android:layout_marginLeft="@dimen/_20ssp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginRight="@dimen/_20ssp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/giohang"
+                android:background="@drawable/background_gio"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_36sdp"
+                android:paddingRight="@dimen/_10sdp"
+                android:paddingLeft="@dimen/_10sdp"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_10ssp"
+                android:layout_marginRight="@dimen/_15sdp"
+                android:text="Thêm vào giỏ hàng" />
+        </LinearLayout>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hang"
+        app:layout_constraintVertical_bias="0.0">
+        <TextView
+            android:text="Mô tả chi tiết sản phẩm"
+            android:textStyle="bold"
+            android:textSize="@dimen/_15ssp"
+            android:paddingLeft="@dimen/_5sdp"
+            android:paddingTop="@dimen/_20sdp"
+            android:textColor="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/mota"
+                android:textSize="@dimen/_12ssp"
+                android:paddingLeft="@dimen/_5sdp"
+                android:gravity="left"
+                android:textColor="@color/black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </ScrollView>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

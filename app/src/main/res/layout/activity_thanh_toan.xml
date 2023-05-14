@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F6F2F2"
+    tools:context=".Activity.ThanhToanActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tool1"
+        android:title="Thanh toán"
+        android:layout_width="match_parent"
+        android:background="#A1CFCB"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <LinearLayout
+        android:id="@+id/page"
+        android:paddingLeft="@dimen/_5sdp"
+        android:paddingRight="@dimen/_5sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tool1"
+        tools:ignore="MissingConstraints">
+        <TextView
+            android:id="@+id/tien"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_15ssp"
+            android:drawableTint="#FFD600"
+            android:drawablePadding="@dimen/_10sdp"
+            android:text="20.000.000D"
+            android:padding="@dimen/_5sdp"
+            android:drawableLeft="@drawable/ic_money"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/sdt"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_15ssp"
+            android:drawableTint="#64DD17"
+            android:drawablePadding="@dimen/_10sdp"
+            android:text="0234569876"
+            android:padding="@dimen/_5sdp"
+            android:drawableLeft="@drawable/ic_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/email"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_15ssp"
+            android:drawableTint="#FF6D00"
+            android:drawablePadding="@dimen/_10sdp"
+            android:text="email@gmail.com"
+            android:padding="@dimen/_5sdp"
+            android:drawableLeft="@drawable/ic_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <EditText
+            android:id="@+id/diachi"
+            android:hint="Nhập địa chỉ giao hàng"
+            android:padding="@dimen/_8sdp"
+            android:drawableTint="#DD2C00"
+            android:textSize="@dimen/_15ssp"
+            android:drawablePadding="@dimen/_5sdp"
+            android:paddingLeft="@dimen/_5sdp"
+            android:drawableStart="@drawable/ic_location"
+            android:background="@drawable/background_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/datHang"
+        android:text="Đặt hàng"
+        android:layout_marginLeft="@dimen/_5sdp"
+        android:layout_marginRight="@dimen/_5ssp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:background="@drawable/background_gio"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/page"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

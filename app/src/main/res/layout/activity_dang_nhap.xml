@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#1A000000"
+    android:layout_height="match_parent"
+    tools:context=".Activity.DangNhapActivity">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:fontFamily="@font/aclonica"
+        android:gravity="center"
+        android:padding="@dimen/_10sdp"
+        android:text="Đăng nhập"
+        android:textColor="#00BFA5"
+        android:textSize="@dimen/_20ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        tools:ignore="MissingConstraints">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:id="@+id/textInputLayout"
+            android:layout_width="match_parent"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_height="wrap_content"
+            app:startIconTint="@color/teal_700"
+            app:startIconDrawable="@drawable/ic_email"
+            app:layout_constraintTop_toBottomOf="@+id/title"
+            tools:ignore="MissingConstraints">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/email"
+                android:textColor="@color/black"
+                android:layout_width="match_parent"
+                android:textSize="@dimen/_15sdp"
+                android:textColorHint="@color/teal_700"
+                android:background="@drawable/background_edit"
+                android:layout_height="wrap_content"
+                android:hint="Email" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_marginRight="@dimen/_5sdp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_height="wrap_content"
+            app:startIconTint="@color/teal_700"
+            app:startIconDrawable="@drawable/ic_key"
+            tools:ignore="MissingConstraints">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/pass"
+                android:layout_width="match_parent"
+                android:textSize="@dimen/_15sdp"
+                android:textColor="@color/black"
+                android:inputType="textPassword"
+                android:textColorHint="#0f0"
+                android:layout_height="wrap_content"
+                android:background="@drawable/background_edit"
+                android:hint="Password" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/xacNhan"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:textColor="@color/white"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:layout_width="match_parent"
+            android:background="@drawable/background_sign"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:text="Xác nhận"
+            android:textSize="@dimen/_15sdp"
+            android:layout_height="wrap_content"/>
+        <LinearLayout
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="Chưa có tài khoản?"
+                android:layout_width="wrap_content"
+                android:textSize="@dimen/_12sdp"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/dangKi"
+                android:layout_marginLeft="@dimen/_2sdp"
+                android:text="Đăng kí."
+                android:textColor="@color/purple_500"
+                android:textSize="@dimen/_12sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+        <TextView
+            android:id="@+id/resetPass"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_gravity="center"
+            android:text="Quên mật khẩu?"
+            android:textColor="#FF6D00"
+            android:layout_width="wrap_content"
+            android:textSize="@dimen/_12sdp"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
